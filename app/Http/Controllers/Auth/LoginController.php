@@ -30,12 +30,20 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
 
-        if (($user->user_type==='admin')){
-            return redirect()->route('Admin.index');
+        if (!$user->verified){
+            auth()->logout();
+            flash('You need to confirm your account. We have sent you an activation code, Please check your email')->error();
+            return back();
+
+    }else{
+            if (($user->user_type==='admin')){
+                return redirect()->route('Admin.index');
+            }
+
+            return redirect()->intended('/home');
+        }
         }
 
-        return redirect()->intended('/home');
-    }
 
   protected $redirectTo = '/home';
 

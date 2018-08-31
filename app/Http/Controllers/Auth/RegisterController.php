@@ -99,13 +99,48 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'photo'=>$photo,
         ]);
-        Mail::to($data['email'])->send(new WelcomeMail($user));
-        return $user;
+        if ($user){
+            $verifyUser=Verifyuser::create([
+                'user_id'=>$user->id,
+                'token'=>str_random(40),
+            ]);
+            Mail::to($user->email)->send(new VerifyMail($user));
+            return $user;
+
+//            Mail::to($data['email'])->send(new WelcomeMail($user));
+//            return $user;
+        }
+
     }
     public function showRegistrationForm()
     {
         $countries=Countries::all();
         return view("auth.register",compact("countries"));
+    }
+    public function verifyUser($token){
+        $verifyUser=Verifyuser::where('token',$token)->first();
+        if(isset($verifyUser)){
+            $user=$verifyUser->user;
+            if (!$user->verified){
+                $verifyUser->user->verified=1;
+                $verifyUser->user->save();
+                Mail::to($user['email'])->send(new WelcomeMail($user));
+                $status="Email Successfully verified. You can now login in with your credentials";
+            }else{
+                $status="Email Already verified. Login in with your credentials.";
+            }
+        }else{
+            flash('Email cannot be verified. Please try again with a valid email address');
+            return redirect('/login');
+        }
+        flash($status);
+        return redirect('/login');
+    }
+    protected function registered(Request $request, $user)
+    {
+        $this->guard()->logout();
+        flash('We sent an activation code. Check your email and click on the link to verify.')->success();
+        return redirect('/login');
     }
 
 }

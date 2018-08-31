@@ -11,17 +11,17 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 class VerifyMail extends Mailable
 {
     use Queueable, SerializesModels;
-    public $token;
+    public $user;
     /**
      * Create a new message instance.
      *
      * @return void
      */
 
-    public function __construct(Verifyuser $token   )
+    public function __construct($user )
     {
         //
-        $this->token=$token;
+        $this->user=$user;
     }
 
     /**
@@ -31,7 +31,6 @@ class VerifyMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Please verify your email')->
-        view('emails.verifyUser');
+        return $this->view('emails.verifyUser');
     }
 }

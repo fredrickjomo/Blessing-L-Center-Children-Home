@@ -1,14 +1,15 @@
-<title>Welcome Email</title>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Email</title>
+</head>
 
-<div class="container">
-    <div class="card">
-        <div class="card-header text-center">
-            Welcome To Blessing Learning Center and Children Home :: {{$user['first_name']}}
-        </div>
-        <div class="card-body">
-            Your registered email is :: {{$user['email']}}, Please click on the below link to
-            verify your email account<br>
-            <a href="{{route('auth.verify',$token)}}">Verify Email</a>
-        </div>
-    </div>
-</div>
+<body>
+<h2>Welcome to the site {{$user['first_name']}}</h2>
+<br/>
+Your registered email-id is {{$user['email']}} , Please click on the below link to verify your email account
+<br/>
+<a href="{{url('user/verify', $user->verifyUser->token)}}">Verify Email</a>
+</body>
+
+</html>
