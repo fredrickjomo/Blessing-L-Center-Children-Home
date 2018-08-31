@@ -1,0 +1,37 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #cccccc;
+
+
+}
+.div-1{
+    padding-top: 20px;
+    margin-top: 3%;
+    margin-left: 1%;
+    //margin-bottom: 20%;
+   background-color:#1d2124;
+    color: #9fcdff;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+button{
+
+}
+#message-header{
+    padding-bottom:3%;
+    align-items: center;
+    text-align: center;
+}
+.col-md-5{
+    padding-bottom:3%;
+}
+.container-fluid{
+    //background-image: url("../../images/image_slider/image1.jpg");
+}
+.info{
+    background-color: #ffffff;
+    color: #1b1e21;
+    border-radius: 5px;
+}

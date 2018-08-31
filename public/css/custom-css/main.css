@@ -1,0 +1,111 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #cccccc;
+
+}
+#profile-image{
+    height:25px ;
+    width: 25px;
+    border-radius: 20%;
+}
+.nav-link{
+    color: #fff;
+    margin-left: 20px;
+    padding: 0 2.0em;
+}
+h2{
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0 2.0em;
+    line-height: 0.7em;
+
+}
+h2 a{
+    color: #ffffff;
+}
+h2 a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+h2 .col-12 .col-md-12{
+
+}
+
+#copyright{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+
+}
+hr{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdown-menu{
+    display: none;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+section{
+    margin-bottom: 2%;
+}
+footer{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    background-color: #666666;
+    padding: 30px 20px;
+}
+.footer-box{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 30px;
+
+}
+footer h3{
+    font-family: "open Sans";
+    font-size: 20px;
+    color: #fff;
+    text-align: left;
+    margin: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.clear{
+    clear: both;
+}
+.footer-box ul{
+    margin: 0px;
+    padding: 0px;
+
+}
+.footer-box ul li{
+    list-style-type: none;
+    padding-top: 5px;
+
+}
+.footer-box ul li a{
+    font-family: "open Sans";
+    font-size: 20px;
+    color: #999;
+
+}
+.fa-facebook-square{
+    color: blue;
+}
+.fa-youtube-square{
+    color: red;
+}
+.fa-twitter-square{
+    color: blue;
+}
+.fa-instagram{
+    color:#ad40ee;
+}
+

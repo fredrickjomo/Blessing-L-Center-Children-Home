@@ -1,0 +1,125 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #cccccc;
+    background-image: url(../images/image_slider/image7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.nav-link{
+    color: #fff;
+    margin-left: 20px;
+    padding: 0 2.0em;
+}
+h2{
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    padding: 0 2.0em;
+    line-height: 0.7em;
+}
+
+.dropdown-menu{
+    display: none;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+#copyright{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+.container{
+    margin: 0 auto;
+}
+#Donate{
+    float: left;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+h1{
+    border: solid #cccccc;
+    background-color:transparent;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+p{
+    border: solid #cccccc;
+    color: #ffffff;
+    font-family: sans-serif;
+    background-color:#666666;
+    margin-top: 25%;
+    background-color: transparent;
+}
+p1{
+    margin-top: 50%;
+}
+p1 button{
+    margin-top:20%;
+    text-decoration: none;
+    color: #ffcc00;
+    font-family: sans-serif;
+    border: solid #cccccc;
+    font-size: 20px;
+    font-style: italic;
+    background-color: transparent;
+}
+#information{
+    margin-left: 15%;
+    float: left;
+    margin-top: 5%;
+    
+}
+#information h4{
+    font-size: 35px;
+    color: #ffffff;
+    text-align: center;
+}
+#information section{
+    width: 80%;
+    height: auto;
+    color: #ffffff;
+    font-size: 30px;
+    
+}
+#payment{
+    float: right;
+    border: solid #cccccc;
+    margin-top: 10%;
+    margin-left: 35%;
+    background-color: #666666;
+    display: none;
+    border-radius:5px;
+}
+#payment img{
+    height: 50px;
+    width: 100px;
+    line-height: 3em;
+   
+}
+#payment h5{
+    font-size: 20px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+strong{
+    color:#ffcc00;
+}
+#bank{
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 3em;
+}
+.fa-paypal{
+    font-size: 40px;
+}
+#payment a{
+    font-size: 20px;
+    font-size: 40px;
+}
